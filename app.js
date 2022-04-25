@@ -15,6 +15,14 @@ app.get('/launchx', (req, res) =>{
     res.send('Bienvenidos a launchX')
 })
 
+// Regresando un objeto 
+// localhost:3000/explorersInNode
+app.get('/explorersInNode', (req, res) => {
+    const explorer1 = {name: "Explorer1", msg:"Hello"}
+    const explorer2 = {name: "Explorer2", msg:"Hi"}
+    res.send([explorer1, explorer2])
+})
+
 // Respondiendo texto
 //Con esto inicializamos esta app
 app.listen(port, () => {
